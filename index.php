@@ -2,6 +2,7 @@
 include "sniffle.php";
 ?>
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +25,7 @@ include "sniffle.php";
   <script>
     $(document).ready(function() {
       $("#notification").click(function(){
-        $(".sniffle").append("<div class='sniffle-notification' onclick='sniffleClose(this)'> <img class='sniffle-img' src='boop.jpg'> <div class='sniffle-content'> <p class='sniffle-header'>Header</p> <p class='sniffle-description'>Description</p> </div> </div>");
+        sniffleAdd("head", "desk", "boop.jpg");
       });
     });
   </script>
@@ -44,6 +45,7 @@ include "sniffle.php";
 <body>
 
 <button id="notification">Add Notification</button>
+
 
 </body>
 </html>
