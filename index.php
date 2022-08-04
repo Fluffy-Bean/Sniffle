@@ -24,8 +24,20 @@ include "sniffle.php";
 
   <script>
     $(document).ready(function() {
-      $("#notification").click(function(){
-        sniffleAdd("head", "desk", "boop.jpg");
+      $("#red").click(function(){
+        sniffleAdd("head", "desk", "red", "boop.jpg");
+      });
+
+      $("#blue").click(function(){
+        sniffleAdd("head", "desk", "blue", "boop2.jpg");
+      });
+
+      $("#green").click(function(){
+        sniffleAdd("head", "desk", "green", "boop3.jpg");
+      });
+
+      $("#black").click(function(){
+        sniffleAdd("head", "desk", "#151515");
       });
     });
   </script>
@@ -34,7 +46,7 @@ include "sniffle.php";
     html, body {
       margin: 0; padding: 0;
     }
-    button {
+    .buttons {
       position: fixed;
       bottom: 1rem;
       left: 50%;
@@ -44,8 +56,12 @@ include "sniffle.php";
 </head>
 <body>
 
-<button id="notification">Add Notification</button>
-
+<div class="buttons">
+  <button id="red">Add Red Notification</button>
+  <button id="blue">Add Blue Notification</button>
+  <button id="green">Add Green Notification</button>
+  <button id="black">Add Black Notification</button>
+</div>
 
 </body>
 </html>

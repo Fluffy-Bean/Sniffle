@@ -1,9 +1,16 @@
 /*
   Sniffle CSS
+
+  Written simply for a reason
 */
 
+/*
+  Base notification stacking
 
-/* Base notification stacking */
+  It allows for the notifications to stack simply
+  Due to div having no height initself there is no
+  reason in hiding it when no notifications are showing
+*/
 .sniffle {
   margin: 0; padding: 0 1rem;
 
@@ -15,8 +22,13 @@
   position: fixed;
 }
 
+/*
+  Notification body
 
-/* Notification body */
+  It contains 2 child elements,
+  am image .sniffle-img
+  and a text div .sniffle-content
+*/
 .sniffle-notification {
   margin-bottom: 1rem; padding: 0.5rem;
 
@@ -31,12 +43,17 @@
 
   transition: transform 1s cubic-bezier(.19,1,.22,1), opacity 0.2s cubic-bezier(.19,1,.22,1);
 }
-.sniffle-content {
-  flex-direction: column;
+.sniffle-notification:hover {
+  transform: scale(1.05);
+
+  box-shadow: 5px 5px 5px #151515aa;
+
+  cursor: pointer;
 }
 
-
-/* Notification icon */
+/*
+  Notification icon/image
+*/
 .sniffle-img {
   margin-right: 1rem;
 
@@ -45,22 +62,18 @@
 
   object-fit: contain;
 }
-/* Notification header */
+/*
+  Notification header
+*/
 .sniffle-header {
   margin: 0; padding: 0;
 
   font-size: 16px;
 }
-/* Notification description */
+/*
+  Notification description
+*/
 .sniffle-description {
   margin: 0; padding: 0;
   font-size: 14px;
-}
-
-.sniffle-notification:hover {
-  transform: scale(1.05);
-
-  box-shadow: 5px 5px 5px #151515aa;
-
-  cursor: pointer;
 }
