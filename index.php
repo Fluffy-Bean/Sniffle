@@ -1,41 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>sniffle test</title>
+  <!-- JQuery must be included -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-  <!-- Google Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@600&amp;display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&amp;display=swap">
-
-  <!-- JQuery -->
-  <script
-    src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous">
-  </script>
-
+  <!-- Snuffle script! -->
   <script src="Sniffle/sniffle.js"></script>
 
+  <!-- These scripts should only be loaded after the document has finished loading -->
   <script>
     $(document).ready(function() {
       $("#red").click(function(){
-        var desk = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-        sniffleAdd("head", desk, "red", "boop.jpg");
+        sniffleAdd("New Notification!", "I am a red notification!", "red", "boop.jpg");
       });
 
       $("#blue").click(function(){
-        sniffleAdd("head", "desk", "blue", "boop2.jpg");
+        sniffleAdd("New Notification!", "I am a blue notification!", "blue", "boop2.jpg");
       });
 
       $("#green").click(function(){
-        sniffleAdd("head", "desk", "green", "boop3.jpg");
+        sniffleAdd("New Notification!", "I am a green notification!", "green", "boop3.jpg");
       });
 
       $("#black").click(function(){
-        var desk = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-        sniffleAdd("head", desk, "#151515");
+        sniffleAdd("Default color", "Black, or #151515, is the default color");
       });
     });
   </script>
