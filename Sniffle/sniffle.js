@@ -1,3 +1,8 @@
+$(document).ready(function() {
+  $("head").append("<link rel='stylesheet' href='Sniffle/sniffle.css'>");
+  $("body").prepend("<div id='sniffle' class='sniffle'></div>");
+});
+
 /*
   Close notification
   Used by the notifications themself, don't use in code
@@ -8,6 +13,7 @@ function sniffleClose(a) {
 
   setTimeout(function(){
     a.closest(".sniffle-notification").style.display="none";
+    a.remove()
   }, 200);
 };
 

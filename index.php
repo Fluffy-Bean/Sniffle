@@ -1,8 +1,3 @@
-<?php
-include "sniffle.php";
-?>
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +6,6 @@ include "sniffle.php";
   <title>sniffle test</title>
 
   <!-- Google Fonts -->
-  <link rel="stylesheet" href="css/master.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@600&amp;display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&amp;display=swap">
 
@@ -22,10 +16,13 @@ include "sniffle.php";
     crossorigin="anonymous">
   </script>
 
+  <script src="Sniffle/sniffle.js"></script>
+
   <script>
     $(document).ready(function() {
       $("#red").click(function(){
-        sniffleAdd("head", "desk", "red", "boop.jpg");
+        var desk = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+        sniffleAdd("head", desk, "red", "boop.jpg");
       });
 
       $("#blue").click(function(){
@@ -37,7 +34,8 @@ include "sniffle.php";
       });
 
       $("#black").click(function(){
-        sniffleAdd("head", "desk", "#151515");
+        var desk = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+        sniffleAdd("head", desk, "#151515");
       });
     });
   </script>
